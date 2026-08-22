@@ -72,12 +72,19 @@ button {
   background: var(--secondary);
 }
 
-/* Force hide Netlify Toolbar / Drawer */
-#netlify-toolbar,
-netlify-toolbar,
-.netlify-toolbar,
-#netlify-drawer,
+/* Force hide Netlify Toolbar / Drawer - Aggressive */
+[id*="netlify"], 
+[class*="netlify-drawer"], 
+[class*="netlify-toolbar"],
 netlify-drawer,
-.netlify-drawer {
+netlify-toolbar,
+netlify-portal,
+#netlify-identity-widget {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -9999 !important;
+  width: 0 !important;
+  height: 0 !important;
 }
