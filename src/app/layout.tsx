@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 import ChatbotWidget from "@/components/chatbot/ChatbotWidget";
+import RemoveNetlify from "@/components/RemoveNetlify";
 
 export default function RootLayout({
   children,
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body>
         <BookingProvider>{children}</BookingProvider>
         <ChatbotWidget />
+        <RemoveNetlify />
       </body>
     </html>
   );
