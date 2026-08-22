@@ -71,3 +71,13 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary);
 }
+
+/* Force hide Netlify Toolbar / Drawer */
+#netlify-toolbar,
+netlify-toolbar,
+.netlify-toolbar,
+#netlify-drawer,
+netlify-drawer,
+.netlify-drawer {
+  display: none !important;
+}
