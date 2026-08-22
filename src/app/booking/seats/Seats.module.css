@@ -1,0 +1,243 @@
+.title {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+
+.statusPanel {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.passengerTabs {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.tab {
+  flex: 1;
+  min-width: 150px;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tab span {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.tab strong {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+.activeTab {
+  border-color: var(--primary);
+  background-color: white;
+}
+
+.completedTab {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: transparent;
+}
+.completedTab strong {
+  color: #10b981;
+}
+
+/* Airplane Layout */
+.airplaneLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.planeNose {
+  width: 320px;
+  height: 80px;
+  background: white;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.03);
+  position: relative;
+  margin-bottom: -10px;
+}
+
+.planeTail {
+  width: 320px;
+  height: 60px;
+  background: white;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  margin-top: -10px;
+}
+
+.legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  z-index: 10;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-dark);
+}
+
+.seatBox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.premiumBox { background-color: #3b82f6; }
+.standardBox { background-color: var(--surface); border: 1px solid var(--border); }
+.selectedBox { background-color: var(--primary); }
+.occupiedBox { background-color: #e5e7eb; }
+
+.cabin {
+  background: white;
+  width: 320px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.03);
+  z-index: 5;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+.rowNumber {
+  width: 25px;
+  text-align: right;
+  margin-right: 15px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 500;
+  position: absolute;
+  left: -40px;
+}
+
+.row {
+  position: relative;
+}
+
+.seatGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.aisle {
+  width: 30px;
+}
+
+.seat {
+  width: 35px;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-light);
+}
+
+.seat:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.seatStandard {
+  background-color: var(--surface);
+}
+
+.seatPremium {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.seatExtraLegroom {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.seatOccupied {
+  background-color: #f3f4f6;
+  color: #d1d5db;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.seatSelected {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.backBtn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-dark);
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.backBtn:hover {
+  background-color: var(--surface);
+}
+
+.continueBtn {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.continueBtn:hover:not(:disabled) {
+  background-color: #0a2a6b;
+}
+
+.continueBtn:disabled {
+  background-color: var(--border);
+  cursor: not-allowed;
+}

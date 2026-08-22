@@ -1,0 +1,114 @@
+.radarContainer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: #0f172a;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #0f172a 0%, #1e293b 100%);
+  box-shadow: inset 0 0 50px rgba(56, 189, 248, 0.1);
+}
+
+.gridOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    linear-gradient(rgba(56, 189, 248, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+}
+
+
+
+.crosshairX, .crosshairY {
+  position: absolute;
+  background-color: rgba(56, 189, 248, 0.3);
+}
+
+.crosshairX {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+
+.crosshairY {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+
+.sweep {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1500px;
+  height: 1500px;
+  margin-top: -750px;
+  margin-left: -750px;
+  transform-origin: 50% 50%;
+  background: conic-gradient(from 0deg, rgba(56, 189, 248, 0.5) 0deg, rgba(56, 189, 248, 0) 60deg, transparent 60deg);
+  animation: sweepAnim 4s linear infinite;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@keyframes sweepAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.flight {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  margin-top: -8px;
+  color: #38bdf8;
+  filter: drop-shadow(0 0 4px #38bdf8);
+  transition: all 1s linear;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.flightDelayed {
+  color: #ef4444;
+  filter: drop-shadow(0 0 4px #ef4444);
+}
+
+.flightInfo {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid #334155;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  color: white;
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 20;
+}
+
+.flight:hover .flightInfo {
+  opacity: 1;
+}

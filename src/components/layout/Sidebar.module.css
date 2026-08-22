@@ -1,0 +1,122 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 480px;
+  height: 100vh;
+  background-color: var(--primary);
+  color: white;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.closeBtn {
+  background-color: white;
+  color: var(--primary);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.closeBtn:hover {
+  background-color: var(--surface);
+}
+
+.content {
+  flex: 1;
+  padding: 1rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.mainNav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.mainNavItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.mainNavItem:hover {
+  opacity: 0.8;
+}
+
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footerNavItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.footerNavItem:hover {
+  opacity: 0.8;
+}
+
+.footerNavItem svg {
+  width: 20px;
+  height: 20px;
+}

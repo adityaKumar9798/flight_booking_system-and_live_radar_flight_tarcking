@@ -1,0 +1,90 @@
+.sidebar {
+  width: 260px;
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.brand {
+  padding: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 12px;
+}
+
+.adminBadge {
+  font-size: 0.7rem;
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.menu {
+  flex: 1;
+  padding: 12px 0;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.5);
+  padding: 0 24px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  color: rgba(255,255,255,0.8);
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  gap: 12px;
+}
+
+.link:hover {
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+.active {
+  background: rgba(255,255,255,0.1);
+  color: var(--secondary);
+  border-right: 3px solid var(--secondary);
+}
+
+.bottomMenu {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 12px 0;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}

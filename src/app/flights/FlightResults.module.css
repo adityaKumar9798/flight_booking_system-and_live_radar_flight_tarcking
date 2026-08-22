@@ -1,0 +1,478 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--surface);
+}
+
+.searchSummaryContainer {
+  background-color: var(--primary);
+  color: white;
+  padding: 2rem 0;
+  margin-top: 60px; /* offset header if fixed */
+}
+
+.searchSummary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.route h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.arrow {
+  color: var(--secondary);
+  margin: 0 0.5rem;
+}
+
+.route p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.editBtn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.editBtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.resultsContainer {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0 4rem;
+  align-items: flex-start;
+}
+
+.sidebar {
+  flex: 0 0 280px;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+/* Custom Scrollbar for Sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 4px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #c1c1c1; 
+  border-radius: 4px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8; 
+}
+
+.sidebar h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clearFilters {
+  font-size: 0.8rem;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+.clearFilters:hover {
+  text-decoration: underline;
+}
+
+.filterSection {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.filterSection:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.filterSection h4 {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.routeInput {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.routeInput:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.priceRangeInputs {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.priceInput {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.priceDivider {
+  color: #666;
+  font-weight: bold;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.checkbox input {
+  accent-color: var(--primary);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox:last-child {
+  margin-bottom: 0;
+}
+
+.checkbox:hover {
+  color: var(--primary);
+}
+
+.flightsList {
+  flex-grow: 1;
+}
+
+.sortingBar {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.sortingBar span {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-light);
+  border-right: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.sortingBar span:last-child {
+  border-right: none;
+}
+
+.sortingBar span:hover {
+  background-color: var(--surface);
+}
+
+.sortActive {
+  background-color: var(--primary) !important;
+  color: white !important;
+}
+
+.flightCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flightCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.airlineInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 25%;
+}
+
+.logoPlaceholder {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.airlineInfo h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.flightNo {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 0.2rem;
+}
+
+.flightTimes {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 50%;
+  justify-content: center;
+}
+
+.timeBlock {
+  text-align: center;
+}
+
+.time {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.airport {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 0.2rem;
+  display: block;
+}
+
+.durationBlock {
+  text-align: center;
+  width: 120px;
+}
+
+.duration {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.line {
+  height: 2px;
+  background-color: var(--border);
+  margin: 0.3rem 0;
+  position: relative;
+}
+
+.line::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid var(--border);
+  border-right: 2px solid var(--border);
+  transform: rotate(45deg);
+}
+
+.stops {
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.priceAction {
+  width: 20%;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.8rem;
+}
+
+.price {
+  color: var(--text-dark);
+}
+
+.currency {
+  font-size: 1.2rem;
+  font-weight: 500;
+  vertical-align: top;
+}
+
+.amount {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.selectBtn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.selectBtn:hover {
+  background-color: #0a2a6b;
+}
+
+/* States */
+.errorState, .emptyState {
+  background: white;
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.errorState p {
+  color: #dc2626;
+  margin-bottom: 1.5rem;
+}
+
+.retryBtn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem 2rem;
+  border-radius: 4px;
+}
+
+.skeletonList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skeletonCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 120px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeletonHeader {
+  width: 30%;
+  height: 20px;
+  background-color: var(--surface);
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.skeletonBody {
+  width: 100%;
+  height: 40px;
+  background-color: var(--surface);
+  border-radius: 4px;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 900px) {
+  .resultsContainer {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .flightCard {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+  
+  .airlineInfo {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .flightTimes {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  
+  .duration {
+    min-width: 80px;
+  }
+  
+  .priceAction {
+    width: 100%;
+    border-left: none;
+    border-top: 1px dashed var(--border);
+    padding-left: 0;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .price {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+}

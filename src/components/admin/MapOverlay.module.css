@@ -1,0 +1,167 @@
+.overlayContainer {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 330px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  pointer-events: none;
+}
+
+.panel {
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  overflow: hidden;
+  pointer-events: auto;
+  border: 1px solid #3f3f3f;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #333;
+  border-bottom: 1px solid #1a1a1a;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.liveBadge {
+  background-color: #facc15;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.listItem {
+  padding: 12px 16px;
+  border-bottom: 1px solid #3f3f3f;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.listItem:hover {
+  background-color: #3f3f3f;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+}
+
+.rowBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flightTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.badge {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.viewers {
+  color: #facc15;
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.route {
+  color: #a3a3a3;
+  font-size: 13px;
+}
+
+.airportCode {
+  border: 1px solid #525252;
+  border-radius: 4px;
+  padding: 1px 4px;
+  font-size: 11px;
+  color: #d4d4d4;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+/* Scrollbar styles */
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+.list::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+.list::-webkit-scrollbar-thumb {
+  background-color: #525252;
+  border-radius: 10px;
+}
+
+.weatherRow {
+  display: flex;
+  gap: 12px;
+  color: #a3a3a3;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.disruptionScore {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.dotRed {
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444;
+  border-radius: 50%;
+}
+
+.dotYellow {
+  width: 8px;
+  height: 8px;
+  background-color: #facc15;
+  border-radius: 50%;
+}
+
+.disruptionFooter {
+  text-align: center;
+  padding: 12px;
+  color: #38bdf8;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #2a2a2a;
+}
+.disruptionFooter:hover {
+  text-decoration: underline;
+}

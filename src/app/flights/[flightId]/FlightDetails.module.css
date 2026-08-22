@@ -1,0 +1,267 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--surface);
+}
+
+.headerBanner {
+  background-color: var(--primary);
+  color: white;
+  padding: 3rem 0;
+  margin-top: 60px;
+}
+
+.headerBanner h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.headerBanner p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contentContainer {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 1rem;
+}
+
+.mainColumn {
+  flex: 1;
+}
+
+.sideColumn {
+  width: 350px;
+  flex-shrink: 0;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardHeader h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+}
+
+.date {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.cardBody {
+  padding: 1.5rem;
+}
+
+.itineraryBody {
+  padding: 2rem;
+}
+
+.airlineHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.airlineHeader strong {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+.flightMeta {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineNode {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.time {
+  width: 60px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: right;
+  padding-top: 2px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid var(--primary);
+  margin-top: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.airport strong {
+  font-size: 1.1rem;
+  display: block;
+}
+
+.airport p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+.timelineSegment {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 60px;
+}
+
+.timelineSegment > div:first-child {
+  width: 60px; /* spacer for time */
+}
+
+.line {
+  width: 2px;
+  background-color: var(--border);
+  height: 100%;
+  margin-left: 6px;
+  transform: translateX(-50%);
+}
+
+.durationInfo {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  background-color: var(--surface);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}
+
+.baggageList {
+  list-style: none;
+}
+
+.baggageList li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.baggageList svg {
+  color: var(--text-light);
+}
+
+/* Summary Card */
+.summaryCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  padding: 1.5rem;
+  position: sticky;
+  top: 100px;
+}
+
+.summaryCard h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.fareBreakdown {
+  margin-bottom: 1.5rem;
+}
+
+.fareRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.fareDivider {
+  height: 1px;
+  background-color: var(--border);
+  margin: 1rem 0;
+}
+
+.totalRow {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.continueBtn {
+  width: 100%;
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.continueBtn:hover {
+  background-color: #0a2a6b;
+}
+
+.policyText {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  text-align: center;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .contentContainer {
+    flex-direction: column;
+  }
+  
+  .sideColumn {
+    width: 100%;
+  }
+  
+  .summaryCard {
+    position: static;
+  }
+}

@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aerosky ✈️ - Flight Booking & Live Radar Tracking System
 
-## Getting Started
+A modern, premium flight booking and live flight tracking web application built with Next.js, React, and Firebase. Aerosky provides a seamless user experience for booking flights, alongside an advanced real-time flight radar.
 
-First, run the development server:
+## ✨ Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **🛫 Flight Booking Engine**: Search, filter, and book flights with a beautiful, intuitive user interface.
+- **📡 Live Flight Radar**: Track active flights on an interactive world map powered by Leaflet. Watch airplanes smoothly glide along their designated routes in real-time.
+- **📊 Advanced Telemetry Panel**: Click on any flight to reveal a glassmorphic sliding panel displaying live telemetry data, including altitude, ground speed, exact coordinates, and heading.
+- **🛠️ Admin Dashboard**: Manage custom flights and monitor system status through a dedicated administrative interface.
+- **🔄 Hybrid Data Sources**: Seamlessly pulls data from a custom Firebase database or falls back to live real-world tracking data via the Aviationstack API.
+- **📱 Fully Responsive**: A premium design that adapts perfectly to desktop, tablet, and mobile devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js](https://nextjs.org/) (React)
+- **Styling**: Vanilla CSS Modules (Glassmorphism, modern gradients, premium typography)
+- **Maps**: [React Leaflet](https://react-leaflet.js.org/)
+- **Database**: [Firebase Firestore](https://firebase.google.com/)
+- **External API**: [Aviationstack](https://aviationstack.com/) (Flight Tracking)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💻 Getting Started
 
-## Learn More
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/adityaKumar9798/flight_booking_system-and_live_radar_flight_tarcking.git
+   cd aerosky
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Configure Environment Variables:**
+   Create a `.env.local` file in the root directory and add your Firebase configuration and Aviationstack API key:
+   ```env
+   NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_firebase_project_id
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+   
+   AVIATIONSTACK_API_KEY=your_aviationstack_key
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📸 Screenshots
+
+*(Add screenshots of the beautiful booking flow and live radar map here!)*
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+## 📝 License
+
+This project is open-source and available under the [MIT License](LICENSE).

@@ -1,0 +1,184 @@
+.layout {
+  min-height: 100vh;
+  background-color: var(--surface);
+  display: flex;
+  flex-direction: column;
+}
+
+.progressContainer {
+  background-color: white;
+  padding: 1.5rem 0;
+  margin-top: 60px;
+  border-bottom: 1px solid var(--border);
+}
+
+.progressBar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.progressBar::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--border);
+  z-index: 1;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.stepCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.stepLabel {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.step.active .stepCircle {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.step.active .stepLabel {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.step.past .stepCircle {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.step.past .stepLabel {
+  color: var(--text-dark);
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  flex: 1;
+}
+
+.mainContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.summarySidebar {
+  width: 350px;
+  flex-shrink: 0;
+}
+
+.summaryCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  padding: 1.5rem;
+  position: sticky;
+  top: 100px;
+}
+
+.summaryCard h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.flightSummary {
+  background-color: var(--surface);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.summaryRoute {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.summaryDate {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.priceBreakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.discountRow {
+  color: #10b981;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border);
+  margin: 0.5rem 0;
+}
+
+.totalRow {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .contentWrapper {
+    flex-direction: column;
+  }
+  
+  .summarySidebar {
+    width: 100%;
+  }
+  
+  .summaryCard {
+    position: static;
+  }
+  
+  .stepLabel {
+    display: none; /* hide labels on mobile to save space */
+  }
+}

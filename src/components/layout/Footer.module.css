@@ -1,0 +1,332 @@
+.footer {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* --- DESKTOP FOOTER --- */
+.desktopFooter {
+  display: block;
+  padding-top: 3rem;
+  background-color: #071d49;
+}
+
+.desktopFooter .container {
+  padding-bottom: 2rem;
+}
+
+.desktopTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.footerSearch {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  width: 280px;
+  padding-bottom: 0.2rem;
+}
+
+.footerSearch input {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 0.4rem 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.footerSearch input:focus {
+  outline: none;
+}
+
+.footerSearch input::placeholder {
+  color: #ccc;
+}
+
+.footerSearch button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 0.2rem;
+}
+
+.footerRegion {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  padding-bottom: 0.4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.column h3 {
+  font-size: 18px;
+  margin-bottom: 1.2rem;
+  font-weight: 900;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  color: white;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.column li {
+  margin-bottom: 1rem;
+}
+
+.column a {
+  color: white;
+  transition: opacity 0.2s;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.column a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.legal {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.legalLink {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.legalLink .arrow {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.legalLink:hover {
+  text-decoration: underline;
+}
+
+/* --- DESKTOP BRAND BAND --- */
+.desktopBrandBand {
+  background-color: white;
+  width: 100%;
+}
+
+.desktopBrandContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0 10px; /* Exact top/bottom from devtools */
+}
+
+.desktopBrandLeft {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.desktopLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.desktopLogoText {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #05164d;
+  letter-spacing: -0.5px;
+}
+
+.desktopMember {
+  font-size: 10px;
+  color: #666;
+  font-weight: 400;
+}
+.desktopMember strong {
+  font-weight: 800;
+  color: #555;
+}
+
+.desktopAlliance {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 10px;
+  color: #555;
+  letter-spacing: 2px;
+}
+
+/* --- MOBILE FOOTER --- */
+.mobileFooter {
+  display: none;
+  background-color: #071d49; /* Dark navy exactly like screenshot */
+}
+
+.accordionGroup {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.accordion {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.accordion:last-child {
+  border-bottom: none;
+}
+
+.accordionHeader {
+  padding: 1.2rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none; /* Hide default marker */
+}
+
+/* Hide webkit default marker for summary */
+.accordionHeader::-webkit-details-marker {
+  display: none;
+}
+
+.accordionIcon {
+  transition: transform 0.3s ease;
+}
+
+.accordion[open] .accordionIcon {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.accordionContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accordionContent li {
+  margin-bottom: 0.8rem;
+}
+
+.accordionContent a {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.mobileSettings {
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.mobileLegalGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem 3rem 1.5rem;
+}
+
+.mobileLegalLink {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.mobileLegalLink svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.mobileBrand {
+  background-color: white;
+  color: var(--primary);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mobileLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.mobileMember {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.mobileAlliance {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 768px) {
+  .desktopFooter {
+    display: none;
+  }
+  .mobileFooter {
+    display: block;
+  }
+}

@@ -1,0 +1,222 @@
+.widgetContainer {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.robotButton {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  transition: transform 0.2s ease;
+  z-index: 1001;
+}
+
+.robotButton:hover {
+  transform: scale(1.1);
+}
+
+.robotCanvasContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(37,99,235,0.1) 0%, rgba(37,99,235,0) 70%);
+  overflow: visible;
+}
+
+.chatWindowContainer {
+  width: 320px;
+  height: 450px;
+  max-height: calc(100vh - 100px);
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  margin-bottom: 16px;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform-origin: bottom right;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  pointer-events: none;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.chatWindowContainer.open {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+}
+
+.header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerTitle {
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerSubtitle {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.closeButton {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.closeButton:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.messageArea {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #f8fafc;
+}
+
+.inputArea {
+  padding: 16px;
+  background: white;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.input {
+  flex: 1;
+  border: 1px solid #cbd5e1;
+  border-radius: 24px;
+  padding: 12px 16px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: #2563eb;
+}
+
+.sendButton {
+  background: #2563eb;
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sendButton:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.sendButton:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.message {
+  max-width: 85%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.userMessage {
+  align-self: flex-end;
+  background: #2563eb;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.aiMessage {
+  align-self: flex-start;
+  background: white;
+  color: #0f172a;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* Quick Actions */
+.quickActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.quickActionBtn {
+  background: white;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quickActionBtn:hover {
+  background: #eff6ff;
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .chatWindowContainer {
+    width: calc(100vw - 32px);
+    max-width: 320px;
+    height: 400px;
+    right: 16px;
+    bottom: 90px;
+  }
+}
