@@ -18,7 +18,7 @@ export default function TrackFlightPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   
-  const [position, setPosition] = useState({ lat: 0, lng: 0, heading: 90 });
+  const [position, setPosition] = useState<any>({ lat: 0, lng: 0, heading: 90 });
   const [isPanelOpen, setIsPanelOpen] = useState(false);
 
   useEffect(() => {

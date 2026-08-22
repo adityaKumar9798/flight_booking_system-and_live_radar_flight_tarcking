@@ -54,7 +54,7 @@ export default function ChatbotWidget() {
 
     try {
       const idToken = auth.currentUser ? await auth.currentUser.getIdToken() : null;
-      let bookings = [];
+      let bookings: any[] = [];
       
       if (auth.currentUser) {
         try {
